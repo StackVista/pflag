@@ -28,7 +28,7 @@ func newTimeValue(val time.Time, p *time.Time, fmts []string) *TimeValue {
 }
 
 func (d *TimeValue) IsDefaultZero(defValue string) bool {
-	return d.Time.IsZero()
+	return defValue == "0001-01-01T00:00:00Z"
 }
 
 // Set time.Time value from string based on accepted formats.
